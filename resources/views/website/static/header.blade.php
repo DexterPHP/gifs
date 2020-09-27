@@ -53,18 +53,24 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">Your History</a>
+                        <a class="nav-link" href="/history">Search History</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="team.html">Photographers</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contact us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">Logout</a>
+                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">Logout [ {{ Auth::user()->name }} ]</a>
                         <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <form  action="/search" method="get" >
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="query" placeholder="Search ..." required min="2"/>
+                            </div>
+
                         </form>
                     </li>
 

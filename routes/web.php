@@ -18,4 +18,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index');
 Route::get('contact', 'HomeController@contact');
 
+
+Route::prefix('/search')->group(function (){
+    Route::get('/', 'HistoryController@search');
+    Route::get('/{title}', 'HistoryController@SearchWithTitle');
+});
+
+Route::prefix('/history')->group(function (){
+    Route::get('/', 'HistoryController@index');
+
+});
 //Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', ['HomeController','index'])->name('dashboard');
