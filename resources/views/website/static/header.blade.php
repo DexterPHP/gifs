@@ -36,7 +36,7 @@
 </head>
 
 <body>
-{{--@include('website.static.loader')--}}
+@include('website.static.loader')
 <section class="content-main-w3" id="home">
     <!--/nav-->
     <div class="header_top_w3ls">

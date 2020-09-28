@@ -62,11 +62,12 @@
 <!-- //js -->
 
 <script src="{{asset('js/bootstrap.js')}}"></script>
-<script src="{{asset('js/jquery.lazy.plugins.min.js')}}"></script>
 <script src="{{asset('js/jquery.lazy.min.js')}}"></script>
+<script src="{{asset('js/jquery.lazy.plugins.min.js')}}"></script>
+
 <script>
     $(function(){
-        $('.loader').fadeOut(2000);
+        $('#loader').fadeOut(2000);
         $('img').addClass('lazy');
         $('.lazy').Lazy({
             // your configuration goes here
