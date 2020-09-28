@@ -20,6 +20,7 @@ Route::get('/dashboard', function(){
     return view('dashboard');
 });
 Route::get('contact', 'HomeController@contact');
+Route::post('contact', 'HomeController@contact');
 
 
 Route::prefix('/search')->group(function (){

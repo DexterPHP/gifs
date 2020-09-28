@@ -3,7 +3,7 @@
     <div class="social_media_w3layouts text-center">
         <ul class="social-icons justify-content-center mt-md-5 mt-3">
             <li class="mr-1"><a href="https://fb.com/fenix.p2h"><span class="fab fa-facebook-f"></span></a></li>
-            <li class="mx-1"><a href="https://twitter.com/#><span class="fab fa-twitter"></span></a></li>
+            <li class="mx-1"><a href="https://twitter.com/#"><span class="fab fa-twitter"></span></a></li>
 
         </ul>
         <p class="copy-right-w3ls my-3">© 2020 PHP Test. All rights reserved | D&P by <a href="https://fb.com/fenix.p2h">Muhammad Khalaf</a></p>

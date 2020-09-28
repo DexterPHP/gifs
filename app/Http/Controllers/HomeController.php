@@ -41,8 +41,19 @@ class HomeController extends Controller
         return view('website.Home',['images'=>$emptyArray]);
     }
 
-    public function contact(){
+    public function contact(Request $request){
+        if($request->isMethod('post')){
+            $to_email = 'fenixthelord@gmail.com';
+            $subject = $request['msg_subject'];
+            $message = $request['msg_text'];
+            $headers = 'From: '.$request['msg_email'];
+            mail($to_email,$subject,$message,$headers);
+            return redirect()->back()->with('Dexter',' ');
 
-        return view('website.contact');
+        }else{
+            return view('website.contact');
+        }
+
+
     }
 }
