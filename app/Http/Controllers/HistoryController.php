@@ -24,7 +24,7 @@ class HistoryController extends Controller
     {
 
         $title = trim($request->get('query'));
-        $GetSearch = file_get_contents('https://api.tenor.com/v1/search?q='.$title.'&key=RG1N89AZU1C3&limit=20');
+        $GetSearch = file_get_contents('https://api.tenor.com/v1/search?q='.$title.'&key=RG1N89AZU1C3&limit=25');
         $de = json_decode($GetSearch);
         $emptyArray = array();
         foreach ($de->results as $gif) {
@@ -57,7 +57,7 @@ class HistoryController extends Controller
     {
 
         $title = trim($title);
-        $GetSearch = file_get_contents('https://api.tenor.com/v1/search?q='.$title.'&key=RG1N89AZU1C3&limit=20');
+        $GetSearch = file_get_contents('https://api.tenor.com/v1/search?q='.$title.'&key=RG1N89AZU1C3&limit=25');
         $de = json_decode($GetSearch);
         $emptyArray = array();
         foreach ($de->results as $gif) {

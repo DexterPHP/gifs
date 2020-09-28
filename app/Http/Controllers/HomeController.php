@@ -11,7 +11,7 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        $cont = file_get_contents('https://api.tenor.com/v1/search?key=RG1N89AZU1C3&limit=20');
+        $cont = file_get_contents('https://api.tenor.com/v1/search?key=RG1N89AZU1C3&limit=25');
         $de = json_decode($cont);
         $emptyArray = array();
         foreach ($de->results as $gif) {
