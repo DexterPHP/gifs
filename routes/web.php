@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'HomeController@index');
+Route::get('/dashboard', function(){
+    return view('dashboard');
+});
 Route::get('contact', 'HomeController@contact');
 
 
